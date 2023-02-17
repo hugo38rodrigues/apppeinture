@@ -2,6 +2,9 @@ import React from 'react';
 import {NavLink} from "react-router-dom";
 
 const Navbar = () => {
+    const toto = () => {
+
+    }
     return (
         <div id='navbar'>
             <NavLink  to='/'><img src="" alt="avion"/></NavLink>
