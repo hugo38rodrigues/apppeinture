@@ -1,12 +1,14 @@
 import React from 'react';
-import Navbar from "../component/navbar";
+import NavBar from "../component/nav-bar";
+import SearchBar from "../component/search-bar";
 
 
 const Home = () => {
     return (
         <div>
           <p id='hello-home'>Hello Home</p>
-            <Navbar/>
+            <NavBar/>
+            <SearchBar/>
         </div>
     );
 };

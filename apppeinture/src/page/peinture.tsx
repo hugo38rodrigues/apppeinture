@@ -1,11 +1,11 @@
 import React from 'react';
-import Navbar from "../component/navbar";
+import NavBar from "../component/nav-bar";
 
 const Peinture = () => {
     return (
         <div>
             <p id='hello-peinture'>Hello peinture</p>
-            <Navbar/>
+            <NavBar/>
         </div>
     );
 };
