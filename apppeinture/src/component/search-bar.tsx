@@ -1,11 +1,11 @@
 import React from 'react';
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import {styled, alpha} from '@mui/material/styles';
+
+interface searchBarProps {
+    researchWord: () => void
+}
 
 const Search = styled('div')(({theme}) => ({
     position: 'relative',
@@ -22,15 +22,6 @@ const Search = styled('div')(({theme}) => ({
     },
 }));
 
-const SearchIconWrapper = styled('div')(({theme}) => ({
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-}));
 
 const StyledInputBase = styled(InputBase)(({theme}) => ({
     color: 'inherit',
@@ -48,15 +39,15 @@ const StyledInputBase = styled(InputBase)(({theme}) => ({
         },
     },
 }));
-const SearchBar = () => {
+const SearchBar = (props: searchBarProps) => {
+    const {researchWord} = props
     return (
         <Box sx={{flexGrow: 1}}>
             <Search>
-                <SearchIconWrapper>
-                </SearchIconWrapper>
                 <StyledInputBase
                     placeholder="Search…"
                     inputProps={{'aria-label': 'search'}}
+                    onChange={researchWord()}
                 />
             </Search>
         </Box>
