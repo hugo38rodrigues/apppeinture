@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Home from './page/home'
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Maquette from "./page/maquette";
 import Peinture from "./page/peinture";
 import Error from "./page/error";
+import Home from "./page/home";
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
