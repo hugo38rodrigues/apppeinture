@@ -1,0 +1,36 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.homePage {
+    display: flex;
+}
+
+.addFly {
+    color: aqua;
+    border-radius: 50px;
+}
+
+.displayFly {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.flyer {
+    width: calc(33.33% - 10px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.flyer:nth-child(3n+1) {
+    margin-right: 0;
+}
+
+
+.navbar {
+    display: flex;
+    align-content: center;
+    height: 300px;
+    width: 100px;
+}

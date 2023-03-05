@@ -27,10 +27,10 @@ const Home = () => {
     }, []);
 
     return (
-        <div>
-            <p id="hello-home">Hello Home</p>
+        <div className='homePage'>
             <Navbar/>
             <DisplayFly displayFly={dataFlyer}/>
+            <button className='addFly'>+</button>
 
         </div>
     );
