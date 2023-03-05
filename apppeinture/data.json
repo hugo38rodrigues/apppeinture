@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "avion de chasse 1",
+    "image": "/avion1.png",
+    "alt": "description avion de chasse 1"
+  },
+  {
+    "id": 2,
+    "title": "avion de chasse 2",
+    "image": "/avion2.png",
+    "alt": "description avion de chasse 2"
+  },
+  {
+    "id": 3,
+    "title": "avion de chasse 3",
+    "image": "/avion3.png",
+    "alt": "description avion de chasse 3"
+  },
+  {
+    "id": 4,
+    "title": "avion de chasse 4",
+    "image": "/avion4.png",
+    "alt": "description avion de chasse 4"
+  },
+  {
+    "id": 5,
+    "title": "avion de chasse 5",
+    "image": "/avion5.png",
+    "alt": "description avion de chasse 5"
+  }
+]
