@@ -1,12 +1,14 @@
 import React from 'react';
-import Navbar from "../component/navbar";
+import NavBar from "../component/nav-bar";
+import PlaneDisplay from "../component/plane-display";
 
 
 const Home = () => {
     return (
-        <div>
+        <div id='home'>
           <p id='hello-home'>Hello Home</p>
-            <Navbar/>
+            <NavBar/>
+            <PlaneDisplay/>
         </div>
     );
 };
