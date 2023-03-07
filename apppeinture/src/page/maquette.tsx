@@ -1,10 +1,9 @@
 import React from 'react';
-import NavBar from "../component/nav-bar";
+import NavBar from '../component/nav-bar';
 
 const Maquette = () => {
     return (
-        <div>
-            <p id='hello-maquette'>Hello maquette</p>
+        <div className='page'>
             <NavBar/>
         </div>
     );

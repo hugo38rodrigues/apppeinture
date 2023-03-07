@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import Navbar from '../component/nav-bar';
 import axios from 'axios';
-import DisplayFly from "../component/display-fly";
+import DisplayFly from '../component/display-fly';
+import {NavLink} from 'react-router-dom';
 
 interface DataFlyer {
     id: number;
@@ -25,12 +26,12 @@ const Home = () => {
         };
         getFly();
     }, []);
-
-    return (
-        <div className='homePage'>
+     return (
+        <div className='page'>
             <Navbar/>
             <DisplayFly displayFly={dataFlyer}/>
-            <button className='addFly'>+</button>
+            <div className='addFly'><span><NavLink to='/maquette-avion'><button >+</button></NavLink></span></div>
+
 
         </div>
     );

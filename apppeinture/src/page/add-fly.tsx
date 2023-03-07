@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from '../component/nav-bar';
 
-const Peinture = () => {
+const AddFly = () => {
     return (
         <div className='page'>
             <NavBar/>
@@ -9,4 +9,4 @@ const Peinture = () => {
     );
 };
 
-export default Peinture;
+export default AddFly;

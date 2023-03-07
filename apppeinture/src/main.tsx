@@ -5,6 +5,7 @@ import Maquette from './page/maquette';
 import Peinture from './page/peinture';
 import Error from './page/error';
 import Home from './page/home';
+import AddFly from './page/add-fly';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
                 <Route path='/' element={<Home/>}/>
                 <Route path='/maquette' element={<Maquette/>}/>
                 <Route path='/peinture' element= {<Peinture/>} />
+                <Route path='/maquette-avion' element={<AddFly/>} />
                 <Route path='*' element= {<Error/>} />
             </Routes>
         </BrowserRouter>

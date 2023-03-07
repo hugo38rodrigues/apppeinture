@@ -1,16 +1,21 @@
 import React from 'react';
 
-const DisplayFly = (prop) => {
+interface DisplayFlyprops {
+    displayFly: any
+}
+
+const DisplayFly = (prop: DisplayFlyprops) => {
     const {displayFly} = prop
     return (
-        <div className='displayFly'>
+        <section>
             {displayFly.map((item) => (
-                <div key={item.id} className='flyer'>
+                <div className='fly' key={item.id}>
                     <h2>{item.title}</h2>
                     <img src={item.image} alt={item.alt}/>
+
                 </div>
             ))}
-        </div>
+        </section>
     );
 };
 
