@@ -26,13 +26,11 @@ const Home = () => {
         };
         getFly();
     }, []);
-     return (
-        <div className='page'>
+    return (
+        <div className="home">
             <Navbar/>
             <DisplayFly displayFly={dataFlyer}/>
-            <div className='addFly'><span><NavLink to='/maquette-avion'><button >+</button></NavLink></span></div>
-
-
+            <div className='addFly'><span><NavLink to='/maquette-avion'><button>+</button></NavLink></span></div>
         </div>
     );
 };
