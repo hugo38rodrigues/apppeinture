@@ -1,10 +1,22 @@
 
 body {
-    width: auto;
-    height: auto;
+    width: 100%;
+    margin:0;
 }
 .home{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+}
+.navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 120px;
+    height: 120px;
+    align-items: flex-start;
+    margin-left: 60px;
 }
 button {
     border-radius: 100%;
@@ -13,4 +25,24 @@ button {
     height: 50px;
     font-size: 25px;
     background: rgba(195, 194, 194, 0.96);
+}
+.displayFly{
+    display: flex;
+    width: 950px;
+    margin-top: 195px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: 120px;
+    align-items: center;
+}
+.addFly{
+    margin-right: 135px;
+    display: flex;
+    margin-top: 823px;
+}
+.fly{
+    border: solid 2px;
+    width: 196px;
+    box-shadow: 10px 5px 5px black;
+    margin: 20px
 }
