@@ -5,10 +5,10 @@ import DisplayFly from '../component/display-fly';
 import {NavLink} from 'react-router-dom';
 
 interface DataFlyer {
-    id: number;
-    image: string;
-    title: string;
-    alt: string;
+    id: number
+    image: string
+    title: string
+    alt: string
 }
 
 const Home = () => {
@@ -29,7 +29,7 @@ const Home = () => {
     return (
         <div className="home">
             <Navbar/>
-            <DisplayFly displayFly={dataFlyer}/>
+            <DisplayFly dataFlyer={dataFlyer}/>
             <div className='addFly'><span><NavLink to='/maquette-avion'><button>+</button></NavLink></span></div>
         </div>
     );

@@ -1,14 +1,19 @@
-import React from 'react';
-
+import React, {FunctionComponent} from 'react';
+interface DataFlyer{
+    id:number
+    title:string
+    alt:string
+    image:string
+}
 interface DisplayFlyprops {
-    displayFly: any
+    dataFlyer: DataFlyer[]
 }
 
-const DisplayFly = (prop: DisplayFlyprops) => {
-    const {displayFly} = prop
+export const DisplayFly:FunctionComponent<DisplayFlyprops> = (prop) => {
+    const {dataFlyer} = prop
     return (
         <div className="displayFly">
-            {displayFly.map((item) => (
+            {dataFlyer.map((item) => (
                 <div className='fly' key={item.id}>
                     <h2>{item.title}</h2>
                     <img src={item.image} alt={item.alt}/>
