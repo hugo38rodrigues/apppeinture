@@ -1,27 +1,60 @@
 import React, {FunctionComponent} from 'react';
-interface DataFlyer{
-    id:number
-    title:string
-    alt:string
-    image:string
+import {Button, Card, CardActionArea, CardMedia, Typography} from '@mui/material';
+
+
+interface DataFlyer {
+    id: number
+    title: string
+    alt: string
+    image: string
 }
+
 interface DisplayFlyprops {
     dataFlyer: DataFlyer[]
 }
 
-export const DisplayFly:FunctionComponent<DisplayFlyprops> = (prop) => {
+export const DisplayFly: FunctionComponent<DisplayFlyprops> = (prop) => {
     const {dataFlyer} = prop
+    const deletedMaquette = (id: number) => {
+        console.log(id)
+    }
+
     return (
-        <div className="displayFly">
+        <>
             {dataFlyer.map((item) => (
-                <div className='fly' key={item.id}>
-                    <h2>{item.title}</h2>
-                    <img src={item.image} alt={item.alt}/>
+                <Card sx={{maxWidth:300, maxHeight:300}} id={'display-fly'} key={item.id}>
+                    <CardActionArea>
+                        <Typography gutterBottom variant="h5" component="div">
+                            {item.title}
+                        </Typography>
+                        <CardMedia
+                            component="img"
+                            height="150"
+                            image={item.image}
+                            alt={item.alt}/>
+                    </CardActionArea>
+                    <Button color="error" variant="outlined" onClick={() => {
+                        deletedMaquette(item.id)
+                    }}>
+                        Supprimer
+                    </Button>
 
-                </div>
+                </Card>
             ))}
-        </div>
-    );
-};
+        </>
 
+        // <CardContent >
+        //     {
+        //         dataFlyer.map((item) => (
+        //             <Card key={item.id} variant="outlined" im>
+        //                 <Typography variant="h5">{item.title}</Typography>
+        //                 <img src={item.image} alt={item.alt}/>
+        //             </Card>
+        //         ))
+        //     }
+        // </CardContent>
+    )
+}
 export default DisplayFly;
+
+
