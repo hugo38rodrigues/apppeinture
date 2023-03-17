@@ -3,7 +3,7 @@ import Navbar from '../component/nav-bar';
 import axios from 'axios';
 import DisplayFly from '../component/display-fly';
 import {NavLink} from 'react-router-dom';
-import {Container, Fab, Grid} from '@mui/material';
+import {Fab} from '@mui/material';
 
 interface DataFlyer {
     id: number
@@ -29,11 +29,13 @@ const Home = () => {
     }, []);
 
     return (
-        <Grid container spacing={3} id='home'>
-            <Grid xs={4}><Navbar/></Grid>
-            <Grid xs={8}><DisplayFly dataFlyer={dataFlyer}/></Grid>
-            <Grid xs={4}><NavLink to='/maquette-avion'><Fab size="large" color="primary" aria-label="add"> + </Fab></NavLink></Grid>
-        </Grid>
-    );
-};
+        <>
+            <div id='Home' className={'home'}>
+                <Navbar/>
+                <DisplayFly dataFlyer={dataFlyer}/>
+                <NavLink to='/maquette-avion'><span className={'add-fly'}><Fab size="large" color="primary" aria-label="add"> + </Fab></span></NavLink>
+            </div>
+        </>
+    )
+}
 export default Home;

@@ -20,9 +20,9 @@ export const DisplayFly: FunctionComponent<DisplayFlyprops> = (prop) => {
     }
 
     return (
-        <>
+        <div className="display-fly">
             {dataFlyer.map((item) => (
-                <Card sx={{maxWidth:300, maxHeight:300}} id={'display-fly'} key={item.id}>
+                <Card sx={{maxWidth: 10, maxHeight: 10}} id={'display-fly'} key={item.id}>
                     <CardActionArea>
                         <Typography gutterBottom variant="h5" component="div">
                             {item.title}
@@ -41,18 +41,7 @@ export const DisplayFly: FunctionComponent<DisplayFlyprops> = (prop) => {
 
                 </Card>
             ))}
-        </>
-
-        // <CardContent >
-        //     {
-        //         dataFlyer.map((item) => (
-        //             <Card key={item.id} variant="outlined" im>
-        //                 <Typography variant="h5">{item.title}</Typography>
-        //                 <img src={item.image} alt={item.alt}/>
-        //             </Card>
-        //         ))
-        //     }
-        // </CardContent>
+        </div>
     )
 }
 export default DisplayFly;
