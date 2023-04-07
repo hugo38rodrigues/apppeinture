@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import Navbar from '../component/nav-bar';
 import axios from 'axios';
 import DisplayFly from '../component/display-fly';
-import {NavLink} from 'react-router-dom';
-import {Fab} from '@mui/material';
+import {Typography} from '@mui/material';
 
 interface DataFlyer {
     id: number
@@ -30,11 +28,8 @@ const Home = () => {
 
     return (
         <>
-            <div id='Home' className={'home'}>
-                <Navbar/>
-                <DisplayFly dataFlyer={dataFlyer}/>
-                <NavLink to='/maquette-avion'><span className={'add-fly'}><Fab size="large" color="primary" aria-label="add"> + </Fab></span></NavLink>
-            </div>
+            <Typography variant='h1' sx={{marginLeft: 80, marginTop: 4}}> Appplication Pot de Peinture</Typography>
+            <DisplayFly dataFlyer={dataFlyer}/>
         </>
     )
 }
