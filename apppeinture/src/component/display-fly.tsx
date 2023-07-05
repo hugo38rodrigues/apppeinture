@@ -1,7 +1,6 @@
 import React, {FunctionComponent} from 'react';
 import {Box, Button, Card, CardActionArea, CardMedia, Typography} from '@mui/material';
 import AddFly from './add-fly';
-import NavBar from './nav-bar';
 
 
 interface DataFlyer {
@@ -24,7 +23,6 @@ export const DisplayFly: FunctionComponent<DisplayFlyprops> = (prop) => {
     return (
         <>
             <div className='display-fly'>
-                <NavBar/>
                 <div className='flys'>
                     <div className='fly'>
                         {dataFlyer.map((item) => (
@@ -41,7 +39,7 @@ export const DisplayFly: FunctionComponent<DisplayFlyprops> = (prop) => {
                                             alt={item.alt}/>
                                     </CardActionArea>
                                 </Card>
-                                <Button variant="contained" sx={{width: 100}} onClick={() => {
+                                <Button variant="contained" className="add-button" sx={{width: 100}} onClick={() => {
                                     deletedMaquette(item.id);
                                 }}>
                                     Supprimer

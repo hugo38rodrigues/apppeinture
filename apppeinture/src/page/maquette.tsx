@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from '../component/nav-bar';
-import {Button, FormControl, Input, TextField, Typography} from '@mui/material';
+import { Input, Typography} from '@mui/material';
 
 
 const Maquette = () => {
