@@ -33,7 +33,7 @@ const Home = () => {
                 <NavBar/>
             </nav>
             <article>
-                <Typography variant='h1' sx={{marginLeft: 80, marginTop: 4}}> Appplication Pot de Peinture</Typography>
+                <Typography variant='h1' sx={{marginLeft: 40, marginTop: 4}}> Appplication Pot de Peinture</Typography>
                 <DisplayFly dataFlyer={dataFlyer}/>
             </article>
         </div>

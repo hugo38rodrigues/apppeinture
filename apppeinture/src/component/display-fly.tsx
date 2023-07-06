@@ -1,5 +1,5 @@
 import React, {FunctionComponent} from 'react';
-import {Box, Button, Card, CardActionArea, CardMedia, Typography} from '@mui/material';
+import {Box, Button, Card, CardActionArea, CardContent, CardMedia, Typography} from '@mui/material';
 import AddFly from './add-fly';
 
 
@@ -21,22 +21,23 @@ export const DisplayFly: FunctionComponent<DisplayFlyprops> = (prop) => {
     }
 
     return (
-        <>
+        <Box sx={{ width: 1200}}>
             <div className='display-fly'>
-                <div className='flys'>
-                    <div className='fly'>
                         {dataFlyer.map((item) => (
-                            <Box className='cards' key={item.id} sx={{marginLeft: 20, marginTop: 4}}>
-                                <Card sx={{width: 400, height: 350, border: 'solid'}} id='card'>
+                            <Box className='cards' key={item.id} >
+                                <Card sx={{ maxWidth: 845, margin: 8 }}>
                                     <CardActionArea>
-                                        <Typography gutterBottom variant="h4" component="div" sx={{marginLeft: 8}}>
-                                            {item.title}
-                                        </Typography>
                                         <CardMedia
                                             component="img"
-                                            height="250"
+                                            height="140"
                                             image={item.image}
-                                            alt={item.alt}/>
+                                            alt={item.alt}
+                                        />
+                                        <CardContent>
+                                            <Typography gutterBottom variant="h5" component="div">
+                                                {item.title}
+                                            </Typography>
+                                        </CardContent>
                                     </CardActionArea>
                                 </Card>
                                 <Button variant="contained" className="add-button" sx={{width: 100}} onClick={() => {
@@ -46,12 +47,9 @@ export const DisplayFly: FunctionComponent<DisplayFlyprops> = (prop) => {
                                 </Button>
                             </Box>
                         ))}
-                    </div>
-                </div>
                 <AddFly/>
             </div>
-
-        </>
+        </Box>
 
     )
 }
