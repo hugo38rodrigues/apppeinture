@@ -2,6 +2,12 @@ body {
     background: rgba(128, 128, 128, 0.97);
     mix-blend-mode: normal;
 }
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 180px;
+}
 .container-home{
     display: flex;
     align-items: center;
@@ -14,18 +20,12 @@ body {
     height: 250px;
     justify-content: space-between;
 }
-.add-button{
-    display: flex;
-    margin-left: 80px;
-    width: 100px;
-    align-items: flex-end;
-}
 
 .display-fly {
     display: flex;
-    flex-wrap: nowrap;
-    margin-top: 150px;
-    border: solid;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: space-around;
 }
 h1 {
     color: white;
@@ -40,4 +40,10 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+}
+.card-front{
+    max-width: 845px;
+    margin: 2px;
+    box-shadow: 10px 5px 5px black;
+    background: white;
 }

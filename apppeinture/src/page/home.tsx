@@ -3,6 +3,7 @@ import axios from 'axios';
 import DisplayFly from '../component/display-fly';
 import {Typography} from '@mui/material';
 import NavBar from '../component/nav-bar';
+import AddFly from '../component/add-fly';
 
 interface DataFlyer {
     id: number
@@ -33,8 +34,9 @@ const Home = () => {
                 <NavBar/>
             </nav>
             <article>
-                <Typography variant='h1' sx={{marginLeft: 40, marginTop: 4}}> Appplication Pot de Peinture</Typography>
+                <Typography variant='h1' sx={{marginTop: 4}}> Appplication Pot de Peinture</Typography>
                 <DisplayFly dataFlyer={dataFlyer}/>
+                <AddFly/>
             </article>
         </div>
     )
