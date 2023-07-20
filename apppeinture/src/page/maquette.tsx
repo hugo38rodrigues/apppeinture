@@ -4,7 +4,6 @@ import {
     Box,
     Button,
     FormControl,
-    Input,
     InputLabel,
     MenuItem,
     Select,
@@ -29,8 +28,17 @@ const Maquette = () => {
             <article>
                 <Box className='maquette-content'>
                     <Typography> Ajouter votre maquette</Typography>
-                    <TextField sx={{ width:8, height:8}} type='file'/>
-
+                    <label htmlFor="upload-photo">
+                        <input
+                            style={{ display: 'none'}}
+                            id="upload-photo"
+                            name="upload-photo"
+                            type="file"
+                        />
+                        <Button color="secondary" variant="outlined" component="span" sx={{}}>
+                            Choisissez votre image
+                        </Button>
+                    </label>
                     <TextField color="primary" type='text' placeholder='Titre de la maquette'/>
                     <FormControl fullWidth>
                         <InputLabel id="demo-simple-select-label">Age</InputLabel>
