@@ -26,7 +26,7 @@ const Home = () => {
             }
         };
         getFly();
-    }, []);
+    }, [dataFlyer]);
 
     return (
         <div className="container-home">

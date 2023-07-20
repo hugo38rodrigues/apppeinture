@@ -1,6 +1,17 @@
 import React from 'react';
 import NavBar from '../component/nav-bar';
-import {Button, FormControl, Input, InputLabel, MenuItem, Select, SelectChangeEvent, Typography} from '@mui/material';
+import {
+    Box,
+    Button,
+    FormControl,
+    Input,
+    InputLabel,
+    MenuItem,
+    Select,
+    SelectChangeEvent,
+    TextField,
+    Typography
+} from '@mui/material';
 
 
 const Maquette = () => {
@@ -11,33 +22,38 @@ const Maquette = () => {
     };
 
     return (
-        <div className='page'>
-            <NavBar/>
-            <div className='content-form'>
-                <Typography> Ajouter votre maquette</Typography>
+        <div className='maquette-page'>
+            <nav>
+                <NavBar/>
+            </nav>
+            <article>
+                <Box className='maquette-content'>
+                    <Typography> Ajouter votre maquette</Typography>
+                    <TextField sx={{ width:8, height:8}} type='file'/>
 
-                <Input color="primary" type='text' placeholder='Titre de la maquette'/>
-                <FormControl fullWidth>
-                    <InputLabel id="demo-simple-select-label">Age</InputLabel>
-                    <Select
-                        labelId="demo-simple-select-label"
-                        id="demo-simple-select"
-                        value={marque}
-                        label="Age"
-                        onChange={handleChange}
-                    >
-                        <MenuItem value={10}>Ten</MenuItem>
-                        <MenuItem value={20}>Twenty</MenuItem>
-                        <MenuItem value={30}>Thirty</MenuItem>
-                    </Select>
-                </FormControl>
+                    <TextField color="primary" type='text' placeholder='Titre de la maquette'/>
+                    <FormControl fullWidth>
+                        <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                        <Select
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            value={marque}
+                            label="Age"
+                            onChange={handleChange}
+                        >
+                            <MenuItem value={10}>Ten</MenuItem>
+                            <MenuItem value={20}>Twenty</MenuItem>
+                            <MenuItem value={30}>Thirty</MenuItem>
+                        </Select>
+                    </FormControl>
 
 
-                <Input type='file' placeholder='Photo de la maquette'/>
-                <Button color="primary" variant="contained">Ajout des pots de peintures </Button>
-                <Button color="success" variant="contained">Crée la maquette</Button>
-            </div>
+                    <Button color="primary" variant="contained">Ajout des pots de peintures </Button>
+                    <Button color="success" variant="contained">Crée la maquette</Button>
+                </Box>
+            </article>
         </div>
+
     )
 }
 
