@@ -1,0 +1,19 @@
+.item-nav-bar:link {
+    text-decoration: none !important;
+}
+.item-nav-bar:hover {
+    text-decoration: underline !important;
+}
+.item-nav-bar:visited {
+    color: #1565c0 !important;
+}
+.item-nav-bar:active {
+    color: #ff0000 !important;
+}
+.item-underline {
+    text-decoration: underline !important;
+    color:  #1565c0;
+}
+/*a:link {*/
+/*    text-decoration: none*/
+/*}*/

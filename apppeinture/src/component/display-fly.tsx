@@ -19,11 +19,10 @@ export const DisplayFly: FunctionComponent<DisplayFlyprops> = (prop) => {
     }
 
     return (
-        <Box sx={{width: 840, paddingRight: 20}}>
-            <div className='display-fly'>
+        <Box sx={{marginLeft: 15, marginBottom: 10, width: 840, display:'flex', flexWrap: 'wrap'}}>
                 {dataFlyer.map((item) => (
-                    <Box className='cards' key={item.id}>
-                        <Box  className='card-front'>
+                    <Box key={item.id} sx={{margin: 2, display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>
+                        <Box>
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
@@ -45,7 +44,6 @@ export const DisplayFly: FunctionComponent<DisplayFlyprops> = (prop) => {
                         </Button>
                     </Box>
                 ))}
-            </div>
         </Box>
 
     )

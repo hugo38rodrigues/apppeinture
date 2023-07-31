@@ -1,0 +1,10 @@
+.maquette-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8px;
+    border: solid;
+    border-radius: 45px;
+    height: 671px;
+    width: 1159px;
+}

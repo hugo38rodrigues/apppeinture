@@ -1,66 +1,15 @@
 import React from 'react';
-import NavBar from '../component/nav-bar';
-import {
-    Box,
-    Button,
-    FormControl,
-    InputLabel,
-    MenuItem,
-    Select,
-    SelectChangeEvent,
-    TextField,
-    Typography
-} from '@mui/material';
+import NavBar from '../component/nav-bar/nav-bar';
+import MaquetteForm from '../component/maquette-form/maquette-form';
+import {Box} from '@mui/material';
 
 
 const Maquette = () => {
-    const [marque, setMarque] = React.useState('');
-
-    const handleChange = (event: SelectChangeEvent) => {
-        setMarque(event.target.value as string);
-    };
-
     return (
-        <div className='maquette-page'>
-            <nav>
-                <NavBar/>
-            </nav>
-            <article>
-                <Box className='maquette-content'>
-                    <Typography> Ajouter votre maquette</Typography>
-                    <label htmlFor="upload-photo">
-                        <input
-                            style={{ display: 'none'}}
-                            id="upload-photo"
-                            name="upload-photo"
-                            type="file"
-                        />
-                        <Button color="secondary" variant="outlined" component="span" sx={{}}>
-                            Choisissez votre image
-                        </Button>
-                    </label>
-                    <TextField color="primary" type='text' placeholder='Titre de la maquette'/>
-                    <FormControl fullWidth>
-                        <InputLabel id="demo-simple-select-label">Age</InputLabel>
-                        <Select
-                            labelId="demo-simple-select-label"
-                            id="demo-simple-select"
-                            value={marque}
-                            label="Age"
-                            onChange={handleChange}
-                        >
-                            <MenuItem value={10}>Ten</MenuItem>
-                            <MenuItem value={20}>Twenty</MenuItem>
-                            <MenuItem value={30}>Thirty</MenuItem>
-                        </Select>
-                    </FormControl>
-
-
-                    <Button color="primary" variant="contained">Ajout des pots de peintures </Button>
-                    <Button color="success" variant="contained">Crée la maquette</Button>
-                </Box>
-            </article>
-        </div>
+        <Box>
+            <NavBar/>
+            <MaquetteForm/>
+        </Box>
 
     )
 }

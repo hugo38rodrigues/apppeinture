@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import DisplayFly from '../component/display-fly';
-import {Typography} from '@mui/material';
-import NavBar from '../component/nav-bar';
+import {Box, Typography} from '@mui/material';
+import NavBar from '../component/nav-bar/nav-bar';
 import AddFly from '../component/add-fly';
 
 interface DataFlyer {
@@ -30,14 +30,17 @@ const Home = () => {
 
     return (
         <div className="container-home">
-            <nav>
-                <NavBar/>
-            </nav>
-            <article>
-                <Typography variant='h1' sx={{marginTop: 4}}> Appplication Pot de Peinture</Typography>
-                <DisplayFly dataFlyer={dataFlyer}/>
-                <AddFly/>
-            </article>
+            <NavBar/>
+            <Box>
+                <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                    <Typography variant='h2' sx={{marginTop: 4, marginBottom: 4}}> Application Pot de
+                        Peinture</Typography>
+                    <Box sx={{display: 'flex', alignItems: 'flex-end', flexDirection: 'column', paddingRight: 4}}>
+                        <DisplayFly dataFlyer={dataFlyer}/>
+                        <AddFly/>
+                    </Box>
+                </Box>
+            </Box>
         </div>
     )
 }
