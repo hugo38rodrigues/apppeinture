@@ -2,9 +2,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 8px;
+    margin: 40px;
     border: solid;
     border-radius: 45px;
     height: 671px;
     width: 1159px;
+}
+
+.form-input {
+    margin-top: 23px;
+    margin-left: 100px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.form-image-title {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    justify-content: space-between;
+    align-items: center;
+}
+.label-picture{
+    height: 230px;
+}
+
+.label-select-paint {
+    fond-size: 20px
 }
