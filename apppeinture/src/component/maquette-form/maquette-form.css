@@ -7,6 +7,7 @@
     border-radius: 45px;
     height: 671px;
     width: 1159px;
+    box-shadow: 20px 40px 40px black;
 }
 
 .form-input {
@@ -31,4 +32,26 @@
 
 .label-select-paint {
     fond-size: 20px
+}
+
+.form-content-input {
+    display: flex;
+    flex-direction: column;
+    height: 390px;
+    justify-content: space-around;
+    margin-left: 16px;
+}
+.btn-content {
+    display: flex;
+    flex-direction: column;
+    height: 220px;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.btn-green {
+    box-shadow: 20px 40px 40px #1B5E20;
+}
+.btn-blue {
+    box-shadow: 20px 40px 40px #1565C0;
 }

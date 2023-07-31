@@ -39,11 +39,13 @@ const MaquetteForm = () => {
                             Choisissez votre image
                         </Button>
                     </label>
-                    <Box>
+                    <Box className='form-content-input'>
                         <Box className='form-input'>
                             <TextField color="primary" type='text' placeholder='Titre de la maquette'/>
                             <Box sx={{margin: 2}}>
-                                <InputLabel  id="select-paint" className='label-select-paint'>Marque de pot de peinture</InputLabel>
+                                <InputLabel  id="select-paint" className='label-select-paint'>
+                                    Marque de pot de peinture
+                                </InputLabel>
                                 <Select
                                     labelId="select-paint"
                                     id="select-paint"
@@ -58,9 +60,21 @@ const MaquetteForm = () => {
                                 </Select>
                             </Box>
                         </Box>
-                        <Box sx={{display:'flex', flexDirection:'column', height: 30, justifyContent: 'space-evenly', alignItems: 'flex-end'}}>
-                            <Button color="primary" variant="contained">Ajout des pots de peintures </Button>
-                            <Button color="success" variant="contained">Crée la maquette</Button>
+                        <Box className={'btn-content'}>
+                            <Button
+                                color="primary"
+                                variant="contained"
+                                sx={{boxShadow: 3}}
+                            >
+                                Ajout des pots de peintures
+                            </Button>
+                            <Button
+                                color="success"
+                                variant="contained"
+                                sx={{boxShadow: 3}}
+                            >
+                                Crée la maquette
+                            </Button>
                         </Box>
                     </Box>
                 </Box>

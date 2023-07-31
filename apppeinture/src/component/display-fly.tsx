@@ -23,7 +23,7 @@ export const DisplayFly: FunctionComponent<DisplayFlyprops> = (prop) => {
                 {dataFlyer.map((item) => (
                     <Box key={item.id} sx={{margin: 2, display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>
                         <Box>
-                            <CardActionArea>
+                            <CardActionArea sx={{ boxShadow:3, marginBottom:2}}>
                                 <CardMedia
                                     component="img"
                                     height="160"
