@@ -4,7 +4,7 @@ on:
     branches:
       - 'main'
 jobs:
-    ubuntu install:
+    ubuntu_install:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout repository
