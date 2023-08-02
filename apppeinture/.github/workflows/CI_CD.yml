@@ -1,0 +1,28 @@
+name: "Application pot de peinture"
+on:
+  push:
+    branches:
+      - 'main'
+jobs:
+  lint:
+    Ubuntu install:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v3
+
+        - name: Use Node.js 18
+          uses: actions/setup-node@v3
+          with:
+            cache: 'npm'
+            cache-dependency-path: package-lock.json
+            node-version: 18
+
+        - name: Install npm dependencies
+          run: |
+            npm run security-checks
+            npm ci
+
+        - name: Lint
+          run: |
+            npm run lint

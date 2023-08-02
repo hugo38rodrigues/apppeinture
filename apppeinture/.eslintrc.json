@@ -1,12 +1,30 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"], // Your TypeScript files extension
+
+      // As mentioned in the comments, you should extend TypeScript plugins here,
+      // instead of extending them outside the `overrides`.
+      // If you don't want to extend any rules, you don't need an `extends` attribute.
+      "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+      "parserOptions": {
+        "project": ["./tsconfig.json"] // Specify it only for TypeScript files
+      }
+    }
+  ],
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
-    }
+    },
+    "project": "./test/tsconfig.test.json"
   },
   "settings": {
     "react": {
@@ -38,32 +56,54 @@
     "plugin:jsx-a11y/recommended"
   ],
   "rules": {
-    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/promise-function-async": "off",
+    "comma-dangle": ["error", "never"],
+    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+    "quote-props": ["error", "consistent-as-needed"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "linebreak-style": ["error", "unix"],
+    "eol-last": ["error", "always"],
+    "camelcase": ["error", { "allow": ["UNSAFE_componentWillReceiveProps", "UNSAFE_componentWillMount"] }],
+    "eqeqeq": "error",
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "new-cap": "error",
+    "no-caller": 2,
+    "no-extra-semi": "error",
+    "no-loss-of-precision": "off",
+    "no-trailing-spaces": "error",
+    "no-undef": "error",
+    "no-use-before-define": [1, "nofunc"],
+    "no-unused-vars": "error",
+    "no-unreachable": "error",
+    "no-useless-escape": "error",
+    "no-restricted-globals": ["error", { "name": "isNaN", "message": "Use Number.isNaN instead" }, "NaN", "parseFloat", "parseInt"],
+    "no-else-return": "warn",
+    "semi": ["error", "never"],
+    "jsx-a11y/alt-text": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 2,
+    "react/no-find-dom-node": "off",
+    "react/prop-types": "error",
     "jsx-a11y/accessible-emoji": "off",
-    "react/prop-types": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
-    "jsx-a11y/anchor-is-valid": [
-      "error",
-      {
-        "components": [
-          "Link"
-        ],
-        "specialLink": [
-          "hrefLeft",
-          "hrefRight"
-        ],
-        "aspects": [
-          "invalidHref",
-          "preferButton"
-        ]
-      }
-    ],
-    "quotes": [
-      2,
-      "single",
-      {
-        "avoidEscape": true
-      }
-    ]
+    "space-before-function-paren": "off",
+    "multiline-ternary": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/space-before-function-paren": ["error", { "anonymous": "always", "named": "never", "asyncArrow": "always" }],
+    "@typescript-eslint/no-misused-promises": ["error", { "checksVoidReturn": false }],
+    "@typescript-eslint/consistent-type-assertions": "off",
+    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/no-invalid-void-type": "off",
+    "@typescript-eslint/no-extraneous-class": "off",
+    "@typescript-eslint/no-unused-vars": ["error", { "vars": "all" }],
+    "@typescript-eslint/restrict-template-expressions": [ "error", { "allowAny": true }],
+    "@typescript-eslint/prefer-nullish-coalescing": "off"
   }
 }
