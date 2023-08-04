@@ -9,15 +9,22 @@ import {
   Typography
 } from '@mui/material'
 import './maquette-form.css'
-import React from 'react'
+import React, {useState} from 'react'
+import ModalPantPot from '../modal-pant-pot'
 
 const MaquetteForm = () => {
-  const [marque, setMarque] = React.useState('')
-
+  const [marque, setMarque] = useState('')
+  const [open, setOpen] = useState(false)
   const handleChange = (event: SelectChangeEvent) => {
-    setMarque(event.target.value as string)
+    setMarque(event.target.value)
   }
 
+  const closeModal = (stateModal: boolean) => {
+    setOpen(stateModal)
+  }
+  const openModal = () => {
+    setOpen(true)
+  }
   return (
     <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
       <Box className="maquette-content">
@@ -65,9 +72,11 @@ const MaquetteForm = () => {
                 color="primary"
                 variant="contained"
                 sx={{boxShadow: 3}}
+                onClick={openModal}
               >
                 Ajout des pots de peintures
               </Button>
+              <ModalPantPot open={open} closeModal={closeModal}/>
               <Button
                 color="success"
                 variant="contained"
@@ -80,6 +89,7 @@ const MaquetteForm = () => {
         </Box>
       </Box>
     </Box>
+
   )
 }
 
