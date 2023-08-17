@@ -10,7 +10,7 @@ import {
 } from '@mui/material'
 import './maquette-form.css'
 import React, {useState} from 'react'
-import ModalPantPot from '../modal-pant-pot'
+import ModalPaintPot from '../modal/modal-paint-pot'
 
 const MaquetteForm = () => {
   const [marque, setMarque] = useState('')
@@ -76,7 +76,7 @@ const MaquetteForm = () => {
               >
                 Ajout des pots de peintures
               </Button>
-              <ModalPantPot open={open} closeModal={closeModal}/>
+              <ModalPaintPot open={open} closeModal={closeModal}/>
               <Button
                 color="success"
                 variant="contained"
