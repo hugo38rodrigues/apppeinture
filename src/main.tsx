@@ -5,6 +5,7 @@ import Maquette from './page/maquette'
 import Peinture from './page/peinture'
 import Error from './page/error'
 import Home from './page/home'
+import './main.css'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>

@@ -1,5 +1,6 @@
 import React, {FunctionComponent} from 'react'
-import {Box, Button, CardActionArea, CardContent, CardMedia, Typography} from '@mui/material'
+import {Box, Card, CardActionArea, CardContent, CardMedia, IconButton, Typography} from '@mui/material'
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever'
 
 interface DataFlyer {
   id: number
@@ -22,8 +23,8 @@ export const DisplayFly: FunctionComponent<DisplayFlyprops> = (prop) => {
     <Box sx={{marginLeft: 15, marginBottom: 10, width: 840, display: 'flex', flexWrap: 'wrap'}}>
       {dataFlyer.map((item) => (
         <Box key={item.id} sx={{margin: 2, display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>
-          <Box>
-            <CardActionArea sx={{boxShadow: 3, marginBottom: 2}}>
+          <Card raised>
+            <CardActionArea>
               <CardMedia
                 component="img"
                 height="160"
@@ -36,12 +37,15 @@ export const DisplayFly: FunctionComponent<DisplayFlyprops> = (prop) => {
                 </Typography>
               </CardContent>
             </CardActionArea>
-          </Box>
-          <Button variant="contained" className="add-button" sx={{width: 100, boxShadow: 10}} onClick={() => {
-            deletedMaquette(item.id)
-          }}>
-            Supprimer
-          </Button>
+            <IconButton
+              color="error"
+              edge="end"
+              onClick={() => {
+                deletedMaquette(item.id)
+              }}>
+              <DeleteForeverIcon />
+            </IconButton>
+          </Card>
         </Box>
       ))}
     </Box>
