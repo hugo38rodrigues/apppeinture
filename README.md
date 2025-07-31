@@ -1,87 +1,97 @@
-# ![Vite](https://vitejs.dev/logo.svg) ![React](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg) ![TypeScript](https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg)
-
 # AppPeinture
 
-**Description du projet :**  
-AppPeinture est une application web interactive développée avec React et TypeScript, permettant aux utilisateurs de visualiser et de gérer des modèles de peinture. L'application est conçue pour être intuitive et réactive, offrant une interface utilisateur moderne et dynamique.
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/hugo38rodrigues/apppeinture/CI_CD)
+![Node.js Version](https://img.shields.io/node/v/apppeinture)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
-**Fonctionnalités clés :**
-- Ajout et affichage de modèles de peinture.
-- Interface utilisateur réactive et conviviale.
-- Gestion des erreurs avec des pages dédiées.
+## Project Description
+
+**AppPeinture** is a web application designed to facilitate the management and display of painting projects, featuring a user-friendly interface for adding and viewing different types of paintings. The application is built using modern web technologies, ensuring a responsive and interactive user experience.
+
+### Key Features
+- **Dynamic Painting Management**: Users can add, display, and manage their painting projects seamlessly.
+- **Responsive Design**: The application is optimized for various devices, providing an excellent user experience on both desktop and mobile.
+- **Modular Components**: Built with reusable components, making it easy to maintain and extend functionality.
 
 ## Tech Stack
 
-| Technologie   | Description                      |
-|---------------|----------------------------------|
-| ![Vite](https://vitejs.dev/logo.svg) Vite          | Outil de construction moderne pour les applications JavaScript. |
-| ![React](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg) React        | Bibliothèque JavaScript pour construire des interfaces utilisateur. |
-| ![TypeScript](https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg) TypeScript | Superset de JavaScript qui ajoute des types statiques. |
+| Technology       | Description                                   |
+|------------------|-----------------------------------------------|
+| ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black) | A JavaScript library for building user interfaces. |
+| ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white) | A typed superset of JavaScript that compiles to plain JavaScript. |
+| ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white) | A fast build tool and development server. |
+| ![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css3&logoColor=white) | Stylesheet language for styling web pages. |
 
-## Instructions d'installation
+## Installation Instructions
 
-### Prérequis
-- Node.js (version 14 ou supérieure)
-- npm (généralement inclus avec Node.js)
+### Prerequisites
+- Node.js (version 12 or higher)
+- npm (Node package manager)
 
-### Guide d'installation
-1. Clonez le dépôt :
+### Step-by-Step Installation
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/hugo38rodrigues/apppeinture.git
    cd apppeinture
    ```
 
-2. Installez les dépendances :
+2. **Install dependencies**:
    ```bash
    npm install
    ```
 
-3. Démarrez l'application :
+3. **Start the development server**:
    ```bash
    npm run dev
    ```
 
-### Configuration de l'environnement
-Aucune configuration d'environnement spécifique n'est nécessaire pour ce projet, car aucun fichier `.env` n'a été détecté.
+4. **Open your browser** and navigate to `http://localhost:3000` to view the application.
 
-## Utilisation
+### Environment Setup
+No specific environment variables are required for this project as per the current configuration.
 
-Pour utiliser l'application, ouvrez votre navigateur et accédez à `http://localhost:3000`. Vous pourrez alors interagir avec les différentes fonctionnalités proposées par l'application.
+## Usage
 
-## Structure du projet
+To run the project, follow the installation instructions above. Once the server is running, you can interact with the application through the following pages:
 
-Voici un aperçu de la structure du projet :
+- **Home Page**: Displays a welcome message and navigation to other sections.
+- **Maquette Page**: Allows users to manage their painting projects.
+- **Peinture Page**: Displays the details of the selected painting projects.
+- **Error Page**: Handles any routing errors gracefully.
+
+## Project Structure
+
+The project structure is organized as follows:
 
 ```
 apppeinture/
-├── public/                  # Contient les ressources statiques
-│   ├── images/              # Images utilisées dans l'application
-│   └── index.html           # Fichier HTML principal
-├── src/                     # Contient le code source de l'application
-│   ├── asset/               # Images et autres actifs
-│   ├── component/           # Composants réutilisables
-│   ├── page/                # Pages de l'application
-│   ├── main.tsx             # Point d'entrée principal de l'application
-│   └── main.css             # Styles globaux
-├── .github/                 # Configuration des workflows GitHub
-├── package.json             # Fichier de configuration des dépendances
-└── vite.config.ts           # Configuration de Vite
+├── .github/               # GitHub workflows for CI/CD
+├── public/                # Public assets, including images and icons
+├── src/                   # Source code for the application
+│   ├── asset/             # Images and static assets
+│   ├── component/         # Reusable components
+│   ├── page/              # Page components for routing
+│   ├── main.tsx           # Entry point for the application
+│   └── main.css           # Main stylesheet
+├── index.html             # Main HTML file
+├── package.json           # Project metadata and dependencies
+└── vite.config.ts         # Configuration for Vite
 ```
 
-### Explications des principaux fichiers et répertoires
+### Main Directories and Files
+- **`.github/`**: Contains CI/CD workflow configuration.
+- **`public/`**: Houses images and icons used in the application.
+- **`src/`**: The core of the application where all components and pages are defined.
+- **`index.html`**: The main HTML file that serves as the entry point for the web application.
+- **`package.json`**: Contains project dependencies and scripts.
+- **`vite.config.ts`**: Configuration file for Vite, defining build and development settings.
 
-- **public/** : Contient les ressources statiques comme les images et le fichier HTML principal.
-- **src/** : Contient le code source de l'application, y compris les composants, les pages et les styles.
-- **package.json** : Gère les dépendances et les scripts de l'application.
-- **vite.config.ts** : Configuration pour le bundler Vite.
+## Contributing
 
-## Contribuer
+We welcome contributions to AppPeinture! If you would like to contribute, please follow these steps:
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your branch and create a pull request.
 
-Les contributions sont les bienvenues ! Pour contribuer, veuillez suivre ces étapes :
-1. Forkez le projet.
-2. Créez une nouvelle branche (`git checkout -b feature/YourFeature`).
-3. Apportez vos modifications et committez (`git commit -m 'Ajout d'une nouvelle fonctionnalité'`).
-4. Poussez vos modifications (`git push origin feature/YourFeature`).
-5. Ouvrez une pull request.
-
-Nous vous remercions de votre intérêt pour AppPeinture et espérons que vous apprécierez le projet !
+Thank you for your interest in contributing to AppPeinture!
