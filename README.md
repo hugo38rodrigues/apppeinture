@@ -10,7 +10,6 @@
 
 ### Key Features
 - **Dynamic Painting Management**: Users can add, display, and manage their painting projects seamlessly.
-- **Responsive Design**: The application is optimized for various devices, providing an excellent user experience on both desktop and mobile.
 - **Modular Components**: Built with reusable components, making it easy to maintain and extend functionality.
 
 ## Tech Stack
